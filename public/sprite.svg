@@ -1,0 +1,54 @@
+<!-- sprite.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
+    <defs>
+        <symbol viewBox="0 0 128 96" id="mail-filled">
+            <path
+                d="M0 11.283V8a8 8 0 0 1 8-8h112a8 8 0 0 1 8 8v3.283l-64 40zm66.12 48.11a4.004 4.004 0 0 1-4.24 0L0 20.717V88a8 8 0 0 0 8 8h112a8 8 0 0 0 8-8V20.717z"
+                data-name="Layer 2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="delete-active">
+            <rect x="5" y="6" width="10" height="10" fill="#8B5CF6" stroke="#C4B5FD" strokeWidth="2" />
+            <path d="M3 6H17" stroke="#C4B5FD" strokeWidth="2" />
+            <path d="M8 6V4H12V6" stroke="#C4B5FD" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="delete-inactive">
+            <rect x="5" y="6" width="10" height="10" fill="#EDE9FE" stroke="#A78BFA" strokeWidth="2" />
+            <path d="M3 6H17" stroke="#A78BFA" strokeWidth="2" />
+            <path d="M8 6V4H12V6" stroke="#A78BFA" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="move-active">
+            <path d="M10 4H16V10" stroke="#C4B5FD" strokeWidth="2" />
+            <path d="M16 4L8 12" stroke="#C4B5FD" strokeWidth="2" />
+            <path d="M8 6H4V16H14V12" stroke="#C4B5FD" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="move-inactive">
+            <path d="M10 4H16V10" stroke="#A78BFA" strokeWidth="2" />
+            <path d="M16 4L8 12" stroke="#A78BFA" strokeWidth="2" />
+            <path d="M8 6H4V16H14V12" stroke="#A78BFA" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="archive-active">
+            <rect x="5" y="8" width="10" height="8" fill="#8B5CF6" stroke="#C4B5FD" strokeWidth="2" />
+            <rect x="4" y="4" width="12" height="4" fill="#8B5CF6" stroke="#C4B5FD" strokeWidth="2" />
+            <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="archive-inactive">
+            <rect x="5" y="8" width="10" height="8" fill="#EDE9FE" stroke="#A78BFA" strokeWidth="2" />
+            <rect x="4" y="4" width="12" height="4" fill="#EDE9FE" stroke="#A78BFA" strokeWidth="2" />
+            <path d="M8 12H12" stroke="#A78BFA" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="duplicate-active">
+            <path d="M4 4H12V12H4V4Z" fill="#8B5CF6" stroke="#C4B5FD" strokeWidth="2" />
+            <path d="M8 8H16V16H8V8Z" fill="#8B5CF6" stroke="#C4B5FD" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="duplicate-inactive">
+            <path d="M4 4H12V12H4V4Z" fill="#EDE9FE" stroke="#A78BFA" strokeWidth="2" />
+            <path d="M8 8H16V16H8V8Z" fill="#EDE9FE" stroke="#A78BFA" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="edit-active">
+            <path d="M4 13V16H7L16 7L13 4L4 13Z" fill="#8B5CF6" stroke="#C4B5FD" strokeWidth="2" />
+        </symbol>
+        <symbol viewBox="0 0 20 20" id="edit-inactive">
+            <path d="M4 13V16H7L16 7L13 4L4 13Z" fill="#EDE9FE" stroke="#A78BFA" strokeWidth="2" />
+        </symbol>
+    </defs>
+</svg>
