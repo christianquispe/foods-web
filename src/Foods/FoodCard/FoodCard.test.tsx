@@ -20,5 +20,6 @@ describe("FoodCard", () => {
     expect(screen.getByRole("heading")).toHaveTextContent('Arroz con pato')
     expect(screen.getByText("Alguna description")).toBeInTheDocument()
     expect(screen.getByRole('img')).toHaveAttribute('src', 'abc')
+    expect(screen.getByRole('img')).toHaveAttribute('alt', 'Arroz con pato')
   });
 });

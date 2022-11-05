@@ -15,7 +15,7 @@ const FoodCard: React.FC<FoodCardProps> = ({
     <article>
       <h2>{name}</h2>
       <p>{description}</p>
-      <img src={img} alt="" />
+      <img src={img} alt={name} />
       <ul>
         {tags.map((tag, index) => (
           <li key={index}>{tag}</li>
