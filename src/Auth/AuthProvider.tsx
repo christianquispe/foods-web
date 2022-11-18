@@ -20,7 +20,11 @@ interface AuthContextType {
 
 let AuthContext = React.createContext<AuthContextType>(null!);
 
-export default function AuthProvider({ children }: { children: React.ReactNode }) {
+export default function AuthProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   let [user, setUser] = React.useState<any>(null);
 
   let signin = (newUser: string, callback: VoidFunction) => {

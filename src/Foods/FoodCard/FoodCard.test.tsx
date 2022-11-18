@@ -16,10 +16,10 @@ function setup() {
 describe("FoodCard", () => {
   it("Should render", () => {
     setup();
-    expect(screen.getAllByRole("listitem")).toHaveLength(2)
-    expect(screen.getByRole("heading")).toHaveTextContent('Arroz con pato')
-    expect(screen.getByText("Alguna description")).toBeInTheDocument()
-    expect(screen.getByRole('img')).toHaveAttribute('src', 'abc')
-    expect(screen.getByRole('img')).toHaveAttribute('alt', 'Arroz con pato')
+    expect(screen.getAllByRole("listitem")).toHaveLength(2);
+    expect(screen.getByRole("heading")).toHaveTextContent("Arroz con pato");
+    expect(screen.getByText("Alguna description")).toBeInTheDocument();
+    expect(screen.getByRole("img")).toHaveAttribute("src", "abc");
+    expect(screen.getByRole("img")).toHaveAttribute("alt", "Arroz con pato");
   });
 });

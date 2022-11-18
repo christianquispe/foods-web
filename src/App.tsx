@@ -1,30 +1,11 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Suspense } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import FoodsLayout from "./Foods/FoodsLayout";
+import { routes } from "./routes";
 
-import Layout from "./Layout";
-
-function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<FoodsLayout />} />
-        <Route path="foods" element={<FoodsLayout />} />
-        <Route path="*" element={<NoMatch />} />
-      </Route>
-    </Routes>
-  );
-}
-
-function NoMatch() {
-  return (
-    <div>
-      <h2>Nothing to see here!</h2>
-      <p>
-        <Link to="/">Go to the home page</Link>
-      </p>
-    </div>
-  );
-}
+const App = () => {
+  const router = createBrowserRouter(routes);
+  return <RouterProvider router={router} />;
+};
 
 export default App;
