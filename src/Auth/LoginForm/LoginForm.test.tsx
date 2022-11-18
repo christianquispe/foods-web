@@ -27,9 +27,17 @@ describe("<LoginForm />", () => {
 
   it("Inputs should accept text", () => {
     setup();
+
     const emailInputNode = screen.getByLabelText("Correo:");
+    const passwordInputNode = screen.getByLabelText("Contraseña:");
+
     expect(emailInputNode.getAttribute("value")).toMatch("");
+    expect(passwordInputNode.getAttribute("value")).toMatch("");
+
     fireEvent.change(emailInputNode, { target: { value: "testing" } });
+    fireEvent.change(passwordInputNode, { target: { value: "12345" } });
+
     expect(emailInputNode.getAttribute("value")).toMatch("testing");
+    expect(passwordInputNode.getAttribute("value")).toMatch("12345");
   });
 });

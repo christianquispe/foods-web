@@ -16,7 +16,13 @@ const LoginForm = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
         <label htmlFor="password">Contraseña:</label>
-        <input id="password" name="password" type="password" />
+        <input
+          id="password"
+          name="password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
       </form>
     </section>
   );
