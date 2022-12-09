@@ -20,7 +20,7 @@ export const routes: RouteObject[] = [
         element: <FoodsPage />,
       },
       {
-        path: PublicRoutes.HOME,
+        path: PublicRoutes.FOOD,
         element: <FoodsPage />,
       },
     ],
