@@ -18,30 +18,31 @@ interface AuthContextType {
   signout: (callback: VoidFunction) => void;
 }
 
-let AuthContext = React.createContext<AuthContextType>(null!);
+const AuthContext = React.createContext<AuthContextType>(null!);
 
 export default function AuthProvider({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  let [user, setUser] = React.useState<any>(null);
+  const [user, setUser] = React.useState<any>(null);
+  const [token, setToken] = React.useState<string | null>(null);
 
-  let signin = (newUser: string, callback: VoidFunction) => {
+  const signin = (newUser: string, callback: VoidFunction) => {
     return fakeAuthProvider.signin(() => {
       setUser(newUser);
       callback();
     });
   };
 
-  let signout = (callback: VoidFunction) => {
+  const signout = (callback: VoidFunction) => {
     return fakeAuthProvider.signout(() => {
       setUser(null);
       callback();
     });
   };
 
-  let value = { user, signin, signout };
+  const value = { user, signin, signout };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
