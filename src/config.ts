@@ -1,0 +1,1 @@
+export const FOOD_API = process.env.REACT_APP_FOOD_API
