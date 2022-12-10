@@ -5,6 +5,7 @@ import { PublicRoutes } from "./types";
 import { Root } from "./root";
 
 import FoodsPage from "./../Foods/FoodsPage";
+import LoginPage from '../Auth/LoginPage';
 
 export const routes: RouteObject[] = [
   {
@@ -22,6 +23,10 @@ export const routes: RouteObject[] = [
       {
         path: PublicRoutes.FOOD,
         element: <FoodsPage />,
+      },
+      {
+        path: PublicRoutes.LOGIN,
+        element: <LoginPage />,
       },
     ],
   },
