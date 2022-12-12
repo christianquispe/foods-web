@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { AuthProvider } from "./shared/context/AuthProvider";
+import AuthProvider from "./Auth/AuthProvider";
 
 import { routes } from "./routes";
 
