@@ -1,20 +1,18 @@
-import { useNavigate } from "react-router-dom";
-import { useAuth } from "./AuthProvider";
+import { AuthActions, useAuth } from "./AuthProvider";
 
 export default function AuthStatus() {
   let auth = useAuth();
-  let navigate = useNavigate();
 
-  if (!auth.user) {
+  if (!auth.state.user) {
     return <p>You are not logged in.</p>;
   }
 
   return (
     <p>
-      Welcome {auth.user}!{" "}
+      Welcome {auth.state.user}!{" "}
       <button
         onClick={() => {
-          auth.signout(() => navigate("/"));
+          auth.dispatch({type: AuthActions.signOut})
         }}
       >
         Sign out
