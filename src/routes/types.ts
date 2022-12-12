@@ -3,3 +3,9 @@ export enum PublicRoutes {
   LOGIN = "login",
   REGISTER = "register",
 }
+
+export enum ProtectedRoutes {
+  DASHBOARD = "dashboard",
+  PERFIL = "perfil",
+  SETTINGS = "settings",
+}

@@ -1,6 +1,6 @@
-import React from "react";
+import { createContext, useContext, useReducer } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { login, LoginParamsDto } from "./aplication/login";
-import { useNavigate } from "react-router-dom";
 
 export enum AuthActions {
   signIn = "LOGIN",
@@ -17,7 +17,7 @@ interface AuthContextState {
   // signout: (callback: VoidFunction) => void;
 }
 
-const AuthContext = React.createContext<
+const AuthContext = createContext<
   | {
       state: AuthContextState;
       dispatch: Dispatch;
@@ -47,7 +47,7 @@ export default function AuthProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [state, dispatch] = React.useReducer(authReducer, {});
+  const [state, dispatch] = useReducer(authReducer, {});
 
   const value = { state, dispatch };
 
@@ -55,7 +55,7 @@ export default function AuthProvider({
 }
 
 export function useAuth() {
-  const context = React.useContext(AuthContext);
+  const context = useContext(AuthContext);
   const navigate = useNavigate();
 
   if (context === undefined) {
