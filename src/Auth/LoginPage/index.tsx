@@ -1,7 +1,12 @@
-import LoginForm from '../LoginForm'
+import { useAuth } from "../AuthProvider";
+import LoginForm, { OnLoginArgs } from "../LoginForm";
 
 export default function LoginPage() {
-  return (
-    <LoginForm onLogin={(vals) => console.log(vals)} />
-  )
+  const { signin } = useAuth();
+
+  const handleLogin = (vals: OnLoginArgs) => {
+    signin(vals);
+  };
+
+  return <LoginForm onLogin={handleLogin} />;
 }
