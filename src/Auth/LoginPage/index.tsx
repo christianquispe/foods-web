@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../AuthProvider";
 
 import LoginForm, { OnLoginArgs } from "../LoginForm";
@@ -17,9 +17,13 @@ export default function LoginPage() {
 
   useEffect(() => {
     if (isLogged) {
-      navigate(from, { replace: true })
+      navigate(from, { replace: true });
     }
-  }, [isLogged, from, navigate])
+  }, [isLogged, from, navigate]);
 
-  return <LoginForm onLogin={handleLogin} />;
+  return (
+    <div className="flex justify-center items-center my-auto">
+      <LoginForm onLogin={handleLogin} />
+    </div>
+  );
 }

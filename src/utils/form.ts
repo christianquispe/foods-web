@@ -1,3 +1,3 @@
-export function validateEmail(str: string): boolean {
+export function isEmailValid(str: string): boolean {
     return str.includes("@");
 }
